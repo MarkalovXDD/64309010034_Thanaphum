@@ -18,6 +18,10 @@ let order = [{
     }
 
 ];
-console.log(order[0].Customer,order[0].ItemOrder,order[0].Qty,order[0].Price);
-console.log(order[1].Customer,order[1].ItemOrder,order[1].Qty,order[1].Price);
-console.log(order[2].Customer,order[2].ItemOrder,order[2].Qty,order[2].Price);
+for (let i = 0; i < order.length; i++){
+    let sum =0;
+    for (let j = 0; j < order[i].ItemOrder.length; j++){
+        sum +=order[i].Qty[j] * order[i].Price[j];
+    }
+    console.log(order[i].Customer,sum);
+} 
